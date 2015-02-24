@@ -13,17 +13,14 @@ var siteHandler = {
     //af9d9d26 municipios
     L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zZW5tYXIiLCJhIjoiRTBnY2plZyJ9.16b9pM_DfVdunAs6jZmE-A';
 
-    var southWest = L.latLng(-59.6, -180),
+    /*var southWest = L.latLng(-59.6, -180),
         northEast = L.latLng(59.6, 180),
-        bounds = L.latLngBounds(southWest, northEast);
+        bounds = L.latLngBounds(southWest, northEast);*/
 
-    var map = L.mapbox.map('map', 'josenmar.3773a852', {
+    var map = L.mapbox.map('map', 'josenmar.52fb0b8a', {
       // set that bounding box as maxBounds to restrict moving the map
       // see full maxBounds documentation:
       // http://leafletjs.com/reference.html#map-maxbounds
-      maxBounds: bounds,
-      maxZoom: 6,
-      minZoom: 3,
       tileLayer: {
           // This map option disables world wrapping. by default, it is false.
           continuousWorld: false,
