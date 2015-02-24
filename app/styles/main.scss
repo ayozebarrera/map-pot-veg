@@ -1,10 +1,14 @@
-$icon-font-path: '../fonts/';
+$icon-font-path: '../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/';
 
 // bower:scss
-@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browserupgrade {
+// variables
+$blue:#3498db;
+$green: #2ecc71;
+
+.browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
@@ -91,3 +95,208 @@ body {
     border-bottom: 0;
   }
 }
+
+header {
+  font-size: 16px;
+  line-height: 19px;
+  box-shadow: 0 4px 7px rgba(0,0,0,0.075);
+  background: $blue;
+  color: #fff;
+  .dropdown-menu{
+    padding-top: 10px;
+    padding-bottom: 6px;
+    a {
+      padding-left: 12px;
+    }
+  }
+  li .buttons{
+    color:#000 !important;
+    padding: 15px 20px !important;
+  }
+  ul.nav .buttons:last-child{
+    margin-right: none !important;
+    margin-left: 40px;
+  }
+  .container{
+    width: 100%;
+    padding: 0 10px !important;
+  }
+  .shadow{
+    bottom: -7px;
+    left: 0;
+    right: 0;
+    height: 6px;
+    box-shadow: inset 0px 5px 6px -3px rgba(0, 0, 0, 0.4);
+    position: absolute;
+  }
+  i.custom{
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .navbar-header{
+    float: none;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  .navbar-center{
+    text-align: center;
+    position: relative;
+    top: 14px;
+    width: 165px;
+    margin: 0 auto;
+    span{
+      font-size: 10px;
+      line-height: 12px;
+      position: relative;
+      top: -7px;
+      color: $green;
+      i{
+        position: relative;
+        top: -1px;
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+}
+.controllers-left{
+  padding-top: 14px;
+  width: 300px;
+  margin-left: 95px;
+  div{
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 20px;
+    span.greenIcon{
+      color: $green;
+    }
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+}
+#logo-small {
+  float: none;
+  display: inline-block;
+  padding: 15px 0;
+  a{
+  }
+}
+.logo{
+  width: 289px;
+}
+.logo-small{
+  width: 100%;
+  position: relative;
+  top:-4px;
+  display: block;
+}
+.options-left{
+  float: left;
+}
+.options-right{
+  display: inherit;
+  float: right;
+  position: relative;
+  margin: 11px 0px 10px 0;
+  padding: 4px 8px;
+  .edit-profile-btn {
+    display: none;
+  }
+  .mobile {
+    //width: 21px;
+    text-align: center;
+    a{
+      display: block;
+      width: 37px;
+    }
+    #social{
+      position: relative;
+      &:focus {
+        color: inherit;
+      }
+    }
+    .dropdown-menu {
+      min-width: 0;
+      left: auto;
+      right: 0;
+      a {
+        width: 100%;
+        display: block;
+        padding: 6px;
+      }
+    }
+    a:active, a:focus {
+      outline: 0;
+    }
+  }
+}
+
+.btn-left{
+  float: left;
+  display: inherit;
+  position: relative;
+  margin: 11px 5px 10px 0px;
+  padding: 4px 10px;
+}
+
+.logo{
+  width: 300px;
+  img{
+    width: 100%;
+  }
+}
+
+#containerWrapper{
+  padding-top: 50px;
+}
+
+html { height: 100%;}
+body { height: 100%; margin: 0; padding: 0;}
+#mainWrapper { height: 100%; padding-top: 50px;}
+/* MAPBOX */
+#map {
+  //position:absolute;
+  width:100%;
+  height: 100%;
+}
+
+.menu-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;right:10px;
+  z-index:1;
+  border-radius:3px;
+  width:120px;
+  border:1px solid rgba(0,0,0,0.4);
+  }
+  .menu-ui a {
+    font-size:13px;
+    color:#404040;
+    display:block;
+    margin:0;padding:0;
+    padding:10px;
+    text-decoration:none;
+    border-bottom:1px solid rgba(0,0,0,0.25);
+    text-align:center;
+    }
+    .menu-ui a:first-child {
+      border-radius:3px 3px 0 0;
+      }
+    .menu-ui a:last-child {
+      border:none;
+      border-radius:0 0 3px 3px;
+      }
+    .menu-ui a:hover {
+      background:#f8f8f8;
+      color:#404040;
+      }
+    .menu-ui a.active {
+      background:#3887BE;
+      color:#FFF;
+      }
+      .menu-ui a.active:hover {
+        background:#3074a4;
+        }
+
