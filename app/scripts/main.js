@@ -20,8 +20,25 @@ var siteHandler = {
     L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zZW5tYXIiLCJhIjoiRTBnY2plZyJ9.16b9pM_DfVdunAs6jZmE-A';
     var map = L.mapbox.map('map', 'josenmar.09107f8b') //josenmar.09107f8b
       .setView([27.947, -15.563], 8);
+    var layers = document.getElementById('menu-ui');
+
     L.control.scale().addTo(map);
+
     var popup = new L.Popup({ autoPan: false });
+
+    var geojsons = ['veg-gc-otros', 'veg-gc-zona-baja'];
+
+    // load feature layer from geojson
+    //var myLayer = L.mapbox.featureLayer().loadURL('scripts/data/veg-gc-otros.geojson').addTo(map);
+
+    //add all layers
+    //addLayer(myLayer, 'Otros', 1);
+
+    for (var i = geojsons.length - 1; i >= 0; i--) {
+      var myLayer = L.mapbox.featureLayer().loadURL('scripts/data/'+geojsons[i]+'.geojson');
+      console.log(i);
+      addLayer(myLayer, geojsons[i], 1);
+    };
 
     function addLayer(layer, name, zIndex) {
         layer
