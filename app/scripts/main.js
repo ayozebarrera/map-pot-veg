@@ -17,18 +17,11 @@ var siteHandler = {
         northEast = L.latLng(59.6, 180),
         bounds = L.latLngBounds(southWest, northEast);*/
 
-    var map = L.mapbox.map('map', 'josenmar.52fb0b8a', {
-      // set that bounding box as maxBounds to restrict moving the map
-      // see full maxBounds documentation:
-      // http://leafletjs.com/reference.html#map-maxbounds
-      tileLayer: {
-          // This map option disables world wrapping. by default, it is false.
-          continuousWorld: false,
-          // This option disables loading tiles outside of the world bounds.
-          noWrap: true
-      }
-    });
+    L.mapbox.accessToken = 'pk.eyJ1Ijoiam9zZW5tYXIiLCJhIjoiRTBnY2plZyJ9.16b9pM_DfVdunAs6jZmE-A';
+    var map = L.mapbox.map('map', 'josenmar.09107f8b') //josenmar.09107f8b
+      .setView([27.947, -15.563], 8);
     L.control.scale().addTo(map);
+    var popup = new L.Popup({ autoPan: false });
 
     function addLayer(layer, name, zIndex) {
         layer
