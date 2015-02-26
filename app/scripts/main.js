@@ -27,6 +27,10 @@ var siteHandler = {
     var popup = new L.Popup({ autoPan: false });
 
     var geojsons = ['veg-gc-otros', 'veg-gc-zona-baja'];
+    /*var geojsons = [
+     {},
+     {},
+    ];*/
 
     // load feature layer from geojson
     //var myLayer = L.mapbox.featureLayer().loadURL('scripts/data/veg-gc-otros.geojson').addTo(map);
